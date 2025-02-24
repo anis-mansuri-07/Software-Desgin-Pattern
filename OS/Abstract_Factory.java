@@ -20,22 +20,26 @@ public abstract class Abstract_Factory {
     }
 
     public static String resultString(Abstract_Factory abs , String productName){
-        //String result;
+        String result;
         switch (productName.toLowerCase()){
             case "button":
                 IButton bt = abs.getButton();
-                return bt.createButton();
+                result = bt.createButton();
+                break;
 
             case "checkbox":
                 ICheckBox cb = abs.getCheckBox();
-                return cb.createCheckBox();
+                result = cb.createCheckBox();
+                break;
 
             case "radiobutton":
                 IRadioButton rb = abs.getRadioButton();
-                return rb.createRadioButton();
+                result = rb.createRadioButton();
+                break;
 
             default:
                  throw new IllegalArgumentException("Invalid Choice Products");
         }
+        return result;
     }
 }

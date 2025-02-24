@@ -9,8 +9,9 @@ public class DBClient {
         Scanner sc = new Scanner(System.in);
 
         String type = sc.nextLine();
-        DbCon = DBFactory.getDbConnection(type);
+
         try {
+            DbCon = DBFactory.getDbConnection(type);
             System.out.println(DbCon.Connect());
             System.out.println(DbCon.Query());
             System.out.println(DbCon.DisConnect());

@@ -10,6 +10,7 @@ public class DBFactory {
             case "postgresql" -> db = new PostgreSql();
             case "mssql" -> db = new MsSql();
             case "mongodb" -> db = new MongoDB();
+            default -> throw new IllegalArgumentException("Invalid Choice");
         }
         return db;
 
