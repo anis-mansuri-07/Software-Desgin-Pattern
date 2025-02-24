@@ -35,7 +35,11 @@ public class Os_Fact_Client {
 //       }
 //        String operationName = Abstract_Factory.resultString(abs,productName);
 //        System.out.println(operationName);
-        System.out.println(Abstract_Factory.resultString(Abstract_Factory.getOsName(osName),productName));
+        try {
+            System.out.println(Abstract_Factory.resultString(Abstract_Factory.getOsName(osName), productName));
+        }catch (IllegalArgumentException eae){
+            System.out.println(eae.getMessage());
+        }
 
     }
 }
