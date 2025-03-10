@@ -17,7 +17,7 @@ public class FirstDB {
             int noOfColumnAdded = statement.executeUpdate("insert into db values(3,'AnishMansuri'),(4,'kayHeruwala')");
             System.out.println(noOfColumnAdded); //return number if statement you inserted
 
-//getcountmethod 
+            //getcountmethod
             int id = 1;
             String name = "Anish";
             String rs = String.format("select * from db where id = %d and name = '%s'",id,name); //this is for dynamic data fetching in system
