@@ -29,13 +29,17 @@ public class GameCharacter implements IGame{
         this.charHealth = charHealth;
     }
 
+
+//    public  GameCharacter(){}
     //Time Consuming Part While Creating Object
     public GameCharacter(String charName, String charType, int charHealth){
         this.charName = charName;
         this.charType = charType;
         this.charHealth = charHealth;
         try {
-            Thread.sleep(5000);
+            System.out.println("Character Loading...");
+            Thread.sleep(3000);
+            System.out.println("Character Loaded now you are ready to go");
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

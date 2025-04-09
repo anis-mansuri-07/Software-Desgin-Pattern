@@ -2,16 +2,18 @@ package DeepCopyCarGOF;
 
 
 public class Bike implements IVehicle{
-    private String brand;
+    private String name;
     private int price;
     private Engine engine;
 
-    public Bike(String brand, int price, Engine engine) {
-        this.brand = brand;
+    public Bike(String name, int price, Engine engine) {
+        this.name = name;
         this.price = price;
         this.engine = engine;
         try {
+            System.out.println("Bike Features Loading...");
             Thread.sleep(3000);
+            System.out.println("Bike Features Loaded now you are ready to go.");
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -33,12 +35,12 @@ public class Bike implements IVehicle{
         this.price = price;
     }
 
-    public String getBrand() {
-        return brand;
+    public String getName() {
+        return name;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setName(String name) {
+        this.name = name;
     }
 
 
@@ -47,7 +49,7 @@ public class Bike implements IVehicle{
         try {
             //shallow copy
             Bike clonedBike = (Bike)super.clone();
-            //deep copy
+            //deep copy : you can write any logic as per your requirement
             clonedBike.engine = this.engine.clone();
             return clonedBike;
         } catch (CloneNotSupportedException e) {
@@ -57,7 +59,7 @@ public class Bike implements IVehicle{
 
     @Override
     public void showDetails() {
-        System.out.println("Bike Brand : "+brand+" | Price : "+price+" | Engine : "+engine.show());
+        System.out.println("Bike Brand : "+name+" | Price : "+price+" | Engine : "+engine.show());
     }
     public int getHashCode(){
         return engine.hashCode();

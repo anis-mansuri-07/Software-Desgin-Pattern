@@ -13,6 +13,12 @@ public class GamerClient {
         gameCharacter1.setCharHealth(120);
         gameCharacter1.showAttributes();
 
+//       GameCharacter gm = gameCharacter1;
+//        gm.setCharHealth(10);
+//       gm.showAttributes();
+//
+//       gameCharacter1.showAttributes();
+
 
         System.out.println("---------------------------------------------------------------------");
         System.out.println("First Time For Weapon");

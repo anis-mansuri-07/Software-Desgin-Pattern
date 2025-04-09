@@ -14,7 +14,9 @@ public class GameWeapon implements IGame{
         this.weaponType = weaponType;
         this.weaponDamage = weaponDamage;
         try {
+            System.out.println("Weapon Loading...");
             Thread.sleep(3000);
+            System.out.println("Weapon Loaded now you are ready to go");
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
