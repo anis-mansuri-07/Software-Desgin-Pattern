@@ -1,5 +1,7 @@
 package Snack_Strategy;
 
 public interface ISnack {
-    void details(String type);
+    String details();
+    String performBite();
+    void setBehavior(IBiteBehavior behavior);
 }

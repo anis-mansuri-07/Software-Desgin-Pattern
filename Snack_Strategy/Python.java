@@ -1,15 +1,14 @@
 package Snack_Strategy;
 
-public class Cobra implements ISnack {
-private IBiteBehavior iBiteBehavior;
-    public Cobra() {
+public class Python implements ISnack{
+    private IBiteBehavior iBiteBehavior;
+    public Python() {
         this.iBiteBehavior = new NonPoison();
     }
 
-
     @Override
     public String details() {
-    return "Cobra";
+        return "Python";
     }
 
     @Override
@@ -19,9 +18,6 @@ private IBiteBehavior iBiteBehavior;
 
     @Override
     public void setBehavior(IBiteBehavior behavior) {
-
+        this.iBiteBehavior = behavior;
     }
-
-
-
 }
