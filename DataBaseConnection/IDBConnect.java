@@ -1,7 +1,5 @@
 package DataBaseConnection;
 
-
-
 public interface IDBConnect {
 
     String Connect();

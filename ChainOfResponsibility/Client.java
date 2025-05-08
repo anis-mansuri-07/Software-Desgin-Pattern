@@ -10,7 +10,7 @@ public class Client {
     second.setException(third);
 
     try{
-        throw new RuntimeException();
+        throw new NullPointerException();
     }catch (Exception e){
         first.exceptionHandler(e);
     }
