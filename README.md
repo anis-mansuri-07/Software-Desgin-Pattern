@@ -62,7 +62,7 @@ They help in making systems **more flexible, reusable, and easier to modify** as
    ```bash
    
    git clone https://github.com/anis-mansuri-07/Software-Desgin-Pattern.git
-```````
+   ```
 
 2. Open any folder (e.g., `SingletonPattern`) in your IDE.
 3. Run the `Main` or `Demo` class for that pattern.
